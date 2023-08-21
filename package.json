@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@angular/cli": "^15.2.9",
+    "keycloak-angular": "^14.0.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.2.0"
+  }
+}
