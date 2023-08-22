@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-        url: 'http://localhost:8180/',
+        url: 'http://localhost:8381/',
         realm: 'PopularSAFI',
-        clientId: 'angular-client-reporte-usuarios'
+        clientId: 'angular-client-reportes'
       },
       initOptions: {
         onLoad: 'login-required',
@@ -28,7 +29,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, KeycloakAngularModule
+    AppRoutingModule, KeycloakAngularModule,
+    DashboardModule
   ],
   providers: [
     {
@@ -40,4 +42,6 @@ function initializeKeycloak(keycloak: KeycloakService) {
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

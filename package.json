@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@angular/cli": "^15.2.9",
+    "cors": "^2.8.5",
     "keycloak-angular": "^14.0.0"
   },
   "devDependencies": {
